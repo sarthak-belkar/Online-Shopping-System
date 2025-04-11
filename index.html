@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSmart - Online Shopping</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">ShopSmart</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#deals">Deals</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="cart-icon" id="cart-icon">
+          <span>🛒</span>
+          <span class="cart-count">0</span>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Shop Smart, Shop Easy</h1>
+      <p>Discover amazing products at unbeatable prices. Free shipping on orders over $50!</p>
+      <button class="cta-button">Shop Now</button>
+    </div>
+  </section>
+
+  <main class="main-container">
+    <section id="categories">
+      <h2 class="section-title">Featured Categories</h2>
+      <div class="featured-categories">
+        <div class="category-card">
+          <div class="category-img">
+            <img src="static/images/gadgetsandtech.webp" alt="Electronics category">
+          </div>
+          <div class="category-content">
+            <h3>Electronics</h3>
+            <p>Latest gadgets and tech</p>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="category-img">
+            <img src="static/images/fashion.webp" alt="Fashion category">
+          </div>
+          <div class="category-content">
+            <h3>Fashion</h3>
+            <p>Trendy outfits and accessories</p>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="category-img">
+            <img src="static/images/homeandgarden.webp" alt="Home & Garden category">
+          </div>
+          <div class="category-content">
+            <h3>Home & Garden</h3>
+            <p>Everything for your living space</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <h2 class="section-title">Best Sellers</h2>
+      <div class="products-grid" id="products-grid">
+        <!-- Products will be loaded here dynamically -->
+      </div>
+    </section>
+
+    <section id="deals">
+      <div class="promo-banner">
+        <div class="promo-content">
+          <h2>Summer Sale!</h2>
+          <p>Get up to 50% off on selected items. Limited time offer!</p>
+          <button class="cta-button">View Deals</button>
+        </div>
+        <div class="promo-img">
+          <img src="static/images/summersale.webp" alt="Summer sale">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">New Arrivals</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="/api/placeholder/200/200" alt="Product 5">
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Ultra HD Camera</h3>
+            <p class="product-price">$399.99</p>
+            <button class="add-to-cart-btn" data-id="5" data-name="Ultra HD Camera" data-price="399.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="/api/placeholder/200/200" alt="Product 6">
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Gaming Headset</h3>
+            <p class="product-price">$89.99</p>
+            <button class="add-to-cart-btn" data-id="6" data-name="Gaming Headset" data-price="89.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="/api/placeholder/200/200" alt="Product 7">
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Fitness Tracker</h3>
+            <p class="product-price">$49.99</p>
+            <button class="add-to-cart-btn" data-id="7" data-name="Fitness Tracker" data-price="49.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="/api/placeholder/200/200" alt="Product 8">
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Smart Home Hub</h3>
+            <p class="product-price">$129.99</p>
+            <button class="add-to-cart-btn" data-id="8" data-name="Smart Home Hub" data-price="129.99">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>ShopSmart</h3>
+        <p>We bring you the best products at the best prices. Shop with confidence with our 30-day money-back guarantee.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">t</a>
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <ul>
+          <li>123 Main Street, City, Country</li>
+          <li>Phone: +1 234 567 890</li>
+          <li>Email: info@shopsmart.com</li>
+          <li>Mon-Fri: 9:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 ShopSmart. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Modal -->
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <span class="close-cart" id="close-cart">×</span>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <!-- Cart items will be added here dynamically -->
+      </div>
+      <div class="cart-total" id="cart-total">Total: $0.00</div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    // Cart functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const cartIcon = document.getElementById('cart-icon');
+      const cartModal = document.getElementById('cart-modal');
+      const closeCart = document.getElementById('close-cart');
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      const cartCount = document.querySelector('.cart-count');
+      const productsGrid = document.getElementById('products-grid');
+      
+      let cart = [];
+      
+      // Fetch and display products
+      fetch('/api/products')
+        .then(response => response.json())
+        .then(products => {
+          products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `
+              <div class="product-img">
+                <img src="${product.image_url}" alt="${product.name}">
+              </div>
+              <div class="product-content">
+                <h3 class="product-title">${product.name}</h3>
+                <p class="product-price">$${product.price.toFixed(2)}</p>
+                <button class="add-to-cart-btn" 
+                        data-id="${product.id}" 
+                        data-name="${product.name}" 
+                        data-price="${product.price}">
+                  Add to Cart
+                </button>
+              </div>
+            `;
+            productsGrid.appendChild(productCard);
+          });
+          
+          // Add event listeners to the newly created buttons
+          const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+          addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+              const id = this.getAttribute('data-id');
+              const name = this.getAttribute('data-name');
+              const price = parseFloat(this.getAttribute('data-price'));
+              
+              // Check if product already in cart
+              const existingItem = cart.find(item => item.id === id);
+              
+              if (existingItem) {
+                existingItem.quantity++;
+              } else {
+                cart.push({
+                  id,
+                  name,
+                  price,
+                  quantity: 1
+                });
+              }
+              
+              updateCart();
+              
+              // Show the cart modal
+              cartModal.classList.add('active');
+            });
+          });
+        })
+        .catch(error => console.error('Error fetching products:', error));
+      
+      // Open cart modal
+      cartIcon.addEventListener('click', function() {
+        cartModal.classList.add('active');
+      });
+      
+      // Close cart modal
+      closeCart.addEventListener('click', function() {
+        cartModal.classList.remove('active');
+      });
+      
+      // Close cart when clicking outside
+      window.addEventListener('click', function(event) {
+        if (event.target === cartModal) {
+          cartModal.classList.remove('active');
+        }
+      });
+      
+      // Update cart display
+      function updateCart() {
+        cartItems.innerHTML = '';
+        let total = 0;
+        let count = 0;
+        
+        cart.forEach(item => {
+          total += item.price * item.quantity;
+          count += item.quantity;
+          
+          const cartItem = document.createElement('div');
+          cartItem.className = 'cart-item';
+          cartItem.innerHTML = `
+            <div class="cart-item-img">
+              <img src="/api/placeholder/80/80" alt="${item.name}">
+            </div>
+            <div class="cart-item-content">
+              <h4 class="cart-item-title">${item.name}</h4>
+              <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+              <div class="cart-item-controls">
+                <button class="quantity-btn decrease" data-id="${item.id}">-</button>
+                <span class="quantity">${item.quantity}</span>
+                <button class="quantity-btn increase" data-id="${item.id}">+</button>
+                <span class="remove-item" data-id="${item.id}">Remove</span>
+              </div>
+            </div>
+          `;
+          
+          cartItems.appendChild(cartItem);
+        });
+        
+        cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+        cartCount.textContent = count;
+        
+        // Add event listeners for quantity controls
+        const decreaseButtons = document.querySelectorAll('.decrease');
+        const increaseButtons = document.querySelectorAll('.increase');
+        const removeButtons = document.querySelectorAll('.remove-item');
+        
+        decreaseButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            const item = cart.find(item => item.id === id);
+            
+            if (item.quantity > 1) {
+              item.quantity--;
+            } else {
+              cart = cart.filter(item => item.id !== id);
+            }
+            
+            updateCart();
+          });
+        });
+        
+        increaseButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            const item = cart.find(item => item.id === id);
+            item.quantity++;
+            updateCart();
+          });
+        });
+        
+        removeButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            cart = cart.filter(item => item.id !== id);
+            updateCart();
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
